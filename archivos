@@ -1,3 +1,16 @@
 echo. > index.html
-echo. > style.css
-echo. > script.js
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Malla Curricular Interactiva</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Malla Curricular - Ingeniería</h1>
+  <div id="malla"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
