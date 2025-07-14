@@ -1,0 +1,34 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 30px;
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 30px;
+}
+
+#malla {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 10px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.curso {
+  background-color: #4fb477;
+  border: 2px solid #3f6634;
+  border-radius: 6px;
+  padding: 12px;
+  transition: background-color 0.3s ease;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.curso:hover {
+  background-color: #d8eadf;
+}
