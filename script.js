@@ -1,9 +1,7 @@
 const cursos = [
-  { nombre: "Precálculo", semestre: 1 },
-  { nombre: "Tópicos en biología", semestre: 1 },
-  { nombre: "Biología de la célula", semestre: 1 },
-  { nombre: "Lab. de química general", semestre: 1 },
-  { nombre: "Química general I", semestre: 1 },
+  { nombre: "Matemática I", semestre: 1 },
+  { nombre: "Programación I", semestre: 1 },
+  { nombre: "Comunicación", semestre: 1 },
   { nombre: "Matemática II", semestre: 2 },
   { nombre: "Física I", semestre: 2 },
   { nombre: "Programación II", semestre: 2 },
@@ -22,18 +20,24 @@ const cursos = [
 
 const malla = document.getElementById('malla');
 
-for (let i = 1; i <= 8; i++) {
-  const semestreCursos = cursos.filter(c => c.semestre === i);
-  if (semestreCursos.length === 0) {
-    const placeholder = document.createElement('div');
-    placeholder.innerHTML = `Semestre ${i}`;
-    malla.appendChild(placeholder);
-    continue;
-  }
-  semestreCursos.forEach(curso => {
-    const div = document.createElement('div');
-    div.className = 'curso';
-    div.innerText = `${curso.nombre}\n(S${curso.semestre})`;
-    malla.appendChild(div);
+// Crear una columna por semestre
+for (let semestre = 1; semestre <= 8; semestre++) {
+  const columna = document.createElement('div');
+  columna.className = 'semestre';
+
+  // Título del semestre
+  const titulo = document.createElement('h2');
+  titulo.innerText = `Semestre ${semestre}`;
+  columna.appendChild(titulo);
+
+  // Cursos del semestre
+  const cursosSemestre = cursos.filter(c => c.semestre === semestre);
+  cursosSemestre.forEach(curso => {
+    const divCurso = document.createElement('div');
+    divCurso.className = 'curso';
+    divCurso.innerText = curso.nombre;
+    columna.appendChild(divCurso);
   });
+
+  malla.appendChild(columna);
 }
