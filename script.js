@@ -15,7 +15,9 @@ const cursos = [
   { nombre: "Redes de Computadoras", semestre: 5 },
   { nombre: "Seguridad Informática", semestre: 6 },
   { nombre: "Tesis I", semestre: 7 },
-  { nombre: "Tesis II", semestre: 8 }
+  { nombre: "Tesis II", semestre: 8 },
+  { nombre: "Tesis II", semestre: 9 },
+  { nombre: "Tesis II", semestre: 10 }
 ];
 
 const malla = document.getElementById('malla');
