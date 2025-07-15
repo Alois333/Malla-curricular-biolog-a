@@ -12,7 +12,7 @@ h1 {
 
 #malla {
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
+  grid-template-columns: repeat(10, 1fr);
   gap: 10px;
   max-width: 1000px;
   margin: auto;
@@ -20,10 +20,10 @@ h1 {
 
 .curso {
   background-color: #4fb477;
-  border: 2px solid #3f6634;
+  border: 3px solid #3f6634;
   border-radius: 6px;
   padding: 12px;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.5s ease;
   font-size: 14px;
   font-weight: bold;
   cursor: pointer;
